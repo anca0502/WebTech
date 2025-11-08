@@ -1,0 +1,18 @@
+.btn:hover {
+  color: blue;
+}
+
+input:required {
+  background-color: red;
+}
+
+input:focus {
+  background-color: yellow !important;
+}
+
+p::first-line {
+  font-weight: bold;
+}
+.vehicle1:checked {
+  border-color: red;
+}
