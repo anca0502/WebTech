@@ -29,6 +29,17 @@ router.route("/postList").post((req, res) => {
   res.json(el);
 });
 
+router.route("/getById/:id").get((req, res) => {
+  const id = parseInt(req.params.id);
+  const item = array.find((el) => el.id === id);
+
+  if (item) {
+    res.json(item);
+  } else {
+    res.status(404).json({ message: "Resursa nu a fost gasita" });
+  }
+});
+
 let port = 8000;
 app.listen(port);
 console.log("Api is running");
